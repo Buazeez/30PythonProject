@@ -1,32 +1,32 @@
 from random import randint
 
-uses = ['حجر', 'ورقه', 'مقص']
+uses = ['ROCK', 'PAPER', 'SCISSORS']
 
 choice = uses[randint(0, 2)]
 
-print('تقدر تختار في ايش راح تلعب من بين ' +
+print('Hey , you can pick your choice play ' +
       uses[0] + ' , ' + uses[1] + ' , ' + uses[2])
-user_choice = input('انا بلعب ')
+user_choice = input('i\'ll play with : ').upper()
 
-print('انا اخترت ' + choice)
+print('Ok , i choiced ' + choice)
 
 if choice == user_choice:
-    print('تعادل')
+    print('draw')
 
-elif user_choice == 'ورقه':
-    if choice != 'مقص':
-        print('انت فزت')
+elif user_choice == uses[1]:
+    if choice != uses[2]:
+        print('u won :)')
     else:
-        print('انا فزت')
+        print('i won :|')
 
-elif user_choice == 'حجر':
-    if choice != 'ورقه':
-        print('انت فزت')
+elif user_choice == uses[0]:
+    if choice != uses[1]:
+        print('u won :)')
     else:
-        print('انا فزت')
+        print('i won :|')
 
-elif user_choice == 'مقص':
-    if choice != 'حجر':
-        print('انت فزت')
+elif user_choice == uses[2]:
+    if choice != uses[0]:
+        print('u won :)')
     else:
-        print('انا فزت')
+        print('i won :|')
